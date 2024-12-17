@@ -248,6 +248,9 @@ class Connection(object):
         self.hostspec = hostspec
         self.connect()
 
+    def __repr__(self):
+        repr_str = f"Connection {self._local.conn._conid} to host: {self.hostspec}"
+
     def connect(self):
         self.conn.connect()
 
